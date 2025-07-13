@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home </title>
+    <style>
+        :root {
+            --color1: rgb(255, 254, 255);
+            --color2: rgb(0, 0, 0);
+            --color3: rgba(137, 134, 134, 0.359);
+            --color4: rgba(255, 255, 255, 0.1);
+            --color5:rgb(152, 222, 152);
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 10px 20px;
+            background: var(--color2);
+        }
+
+        nav {
+            background-color: var(--color2);
+        }
+
+        ul {
+            display: flex;
+            list-style-type: none;
+            gap: 60px;
+        }
+
+        nav>ul>li {
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav>ul>li a {
+            text-decoration: none;
+            color: var(--color1);
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        nav>ul>li:hover {
+            background-color: var(--color3);
+        }
+
+        nav>ul>li.active {
+            background-color: var(--color4);
+        }
+
+        .search {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .search input {
+            padding: 8px;
+            font-size: 16px;
+            width: 220px;
+            border-radius: 10px;
+            border: none;
+            transition: background-color 0.3s, transform 0.3s ease;
+        }
+
+        .search input:focus {
+            background-color: var(--color1);
+            outline: none;
+            transform: scale(1.03);
+        }
+
+        .search button {
+            padding: 8px 12px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 10px;
+            border: none;
+            background-color: var(--color1);
+            transition: background-color 0.3s, transform 0.3s ease;
+        }
+
+        .search button:hover {
+            background-color: var(--color5);
+            transform: scale(1.05);
+        }
+
+        @media screen and (max-width: 768px) {
+            body {
+                background-color: var(--color4);
+            }
+
+            header {
+                width: 100%;
+                flex-direction: column;
+            }
+
+            .nav {
+                flex-direction: column;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="search">
+            <input type="text" placeholder="Search Here" />
+            <button type="submit">Search</button>
+        </div>
+    </header>
+
+</body>
+
+</html>

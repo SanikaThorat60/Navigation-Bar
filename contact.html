@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        :root {
+            --color1: rgb(255, 254, 255);
+            --color2: rgb(0, 0, 0);
+            --color3: rgba(137, 134, 134, 0.359);
+            --color4: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+
+        nav {
+            background-color: var(--color2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 10px 20px;
+        }
+
+        ul {
+            display: flex;
+            list-style-type: none;
+            gap: 60px;
+        }
+
+        nav>ul>li {
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        nav>ul>li a {
+            text-decoration: none;
+            color: var(--color1);
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        nav>ul>li:hover {
+            background-color: var(--color3);
+        }
+
+        nav>ul>li.active {
+            background-color: var(--color4);
+        }
+
+        @media screen and (max-width: 768px) {
+            body {
+                background-color: var(--color4);
+            }
+
+            .nav {
+                flex-direction: column;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+</body>
+
+</html>
